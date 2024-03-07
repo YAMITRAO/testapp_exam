@@ -1,0 +1,44 @@
+
+
+.formContainer{
+    width: 80%;
+    height: 100px;
+    background-color: rgb(184, 193, 19);
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 1rem;
+    
+}
+
+.nameInput > input, .descInput > input, .priceInput > input  {
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    text-indent: 5px;
+    margin: 5px
+}
+
+.nameInput > label, .descInput > label, .priceInput > label {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.addButton > button{
+    cursor: pointer;
+    border: none;
+    background-color: red;
+    border-radius: 18px;
+    padding: 6px 15px ;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    font-family: monospace;
+}
+
+.addButton > button:hover {
+   scale: 1.02;
+   background-color: rgb(236, 27, 27);
+}
