@@ -18,11 +18,12 @@
     border: none;
     font-size: 20px;
     text-indent: 5px;
-    margin: 5px
+    margin: 5px;
+    width: 15vw;
 }
 
 .nameInput > label, .descInput > label, .priceInput > label {
-    font-size: 20px;
+    font-size: 2vw;
     font-weight: 500;
 }
 
@@ -41,4 +42,20 @@
 .addButton > button:hover {
    scale: 1.02;
    background-color: rgb(236, 27, 27);
+}
+
+
+.overlayContainer{
+    position: relative;
+    width: 80%;
+    height: 100px;
+    background-color: rgb(24, 144, 144);
+    margin: 10px auto;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }

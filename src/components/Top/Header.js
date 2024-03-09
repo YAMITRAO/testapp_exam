@@ -1,23 +1,25 @@
 import React, { useContext } from 'react'
 import style from "./Header.module.css"
-import ItemContext from '../../../store/ItemContext'
+import DataContext from '../../store/DataContext'
 
 const Header = () => {
+   
+  const dataOfCartCtx = useContext(DataContext);
 
-  const itemContextData = useContext(ItemContext);
-  // console.log(itemContextData);
+  const totalCartValue = dataOfCartCtx.cartItems.length;
 
-  const totalCartItem = itemContextData.TotalItem.length;
-  console.log(totalCartItem);
-  // console.log(totalCartItem); 
+  const headerButtonHandler = () => {
+    dataOfCartCtx.cartVisibility("1");
+  }
+
   return (
     <>
     <div className={style.headerContainer}>  
     <div className={style.logo}>MyChocoApp</div>
-     <button className={style.cart}>
+     <button className={style.cart} onClick={ headerButtonHandler}>
         <div className={style.cartIcon}>$</div>
         <div className={style.cartName}>Cart</div>
-        <div className={style.cartCount}>{totalCartItem}</div>
+        <div className={style.cartCount}>{totalCartValue}</div>
      </button>
     </div>
   
